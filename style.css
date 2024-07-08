@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root{
+    --bg-color: #131010;
+    --text-color: #fdfcfc;
+    --hover-color: #116bbe;
+    --normal-font: 1.5rem;
+    --big-font:2.5rem;
+    --neon-font:0 0 10px #12f7ff;
+    --neon-box-shadow:0 0 0.2rem #12f7ff;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    font-size: var(--normal-font);
+}
