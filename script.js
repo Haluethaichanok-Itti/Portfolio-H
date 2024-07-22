@@ -77,11 +77,13 @@ function toggleMobileMenu() {
 //   });
 
 let slideIndex = 0; // Start slide index from 1
-
-function showSlides(n) {
-
-  let slides = document.getElementsByClassName("mySlides");
+let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
+
+// function showSlides(n, currentSlide=false) {
+  function showSlides(n) {
+  // let slides = document.getElementsByClassName("mySlides");
+  // let dots = document.getElementsByClassName("dot");
   // Hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -115,8 +117,22 @@ showSlides(n);
 
 // Function to change to specific slide
 function currentSlide(n) {
-  
-  showSlides(slideIndex = n);
+  // showSlides(n);
+  // plusSlides(n)
+  // showSlides(slideIndex = n);
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    // Reset dot styles
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slideIndex = n
+
+    // Display current slide and activate corresponding dot
+slides[slideIndex ].style.display = "block";
+dots[slideIndex].className += " active";
 }
 
 // Auto slide every 3 seconds
