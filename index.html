@@ -7,25 +7,204 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      
     </head>
     <body>
         <header>
-            <a href="#" class="logo">Portfolio</a>
-            <ul class="navbar">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="bx bx-menu" id="menu-icon" onclick="toggleMobileMenu()">
+                </div>
+                <ul class="navbar-mobile" id="navbar-mobile">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <!-- <section class="home" id="home">
-            <div class="home-text">
-                <h1>Hello, I'm <br> <span>Portfolio</span></h1>
-                <h3>Web Developer</h3>
-                <a href="#" class="btn">Hire Me</a>
+        <section class="about typing" id="about"> 
+            <div class="about-text">
+                <h1 class ="typewriter">HELLO MY NAME IS...</h1>
+                <h4>Haluethaichanok Ittisawetchaikul</h4>
+                <p    > I'm a junior full-stack developer skilled in React, JavaScript, Node.js, and MongoDB. </p>
             </div>
-        </section> -->
+            <div class="about-img">
+                <img class="profile" src="./public/profile.jpeg" />
+            </div>
+        </section>
+        <section class="experience" id="experience">
+            <h1>Experience</h1>
+            <div class="timeline hidden-right">
+                <div class="container container-left hidden">
+                    
+                        
+                    
+                    <img class="experience-img" src="./public/petervision.png" />
+                    <div class="text-box">
+                        <h5>Inn</h5>
+                        <small>2019 - Present</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="container container-right hidden">
+                    <img class="experience-img" src="./public/generation.png" />
+                    <div class="text-box">
+                        <h5>Inn</h5>
+                        <small>2019 - Present</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="container container-left hidden">
+                    <img class="experience-img" src="./public/petervision.png" />
+                    <div class="text-box">
+                        <h5>Inn</h5>
+                        <small>2019 - Present</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+    
+            </div>
+          
+        </section>
+        <section class="projects" id="projects">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="scrollVertical">
+                        <div class="photoProject">
+                  <img src="./public/orangecat.jpg">
+
+                        </div>
+                      </div>
+                  <div class="text">
+                    <div class="detail">
+                        <h3>
+                            <b>OrangeCat Exercise Tracker Web Application</b>
+                          </h3>
+                         
+                          <p>
+                            Responsive web application page for OrangeCat exercise tracker
+                            as a group project. The Target group is 7 to 25 years. Using
+                            React for frontend and node.js, express, mongoose, MongoDB
+                            Atlas, and Cloudinary for the backend.
+                          </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="scrollVertical">
+                        <div class="photoProject">
+                  <img src="./public/colmar.jpg">
+
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="detail">
+                            Caption Two
+                        </div>
+                      </div>
+                </div>
+
+                <!-- <div class="mySlides fade">
+                    <div class="scrollVertical ">
+                        <div class="photoProject no">
+                  <img src="./public/find-you-hat.png">
+
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="detail">
+                            Caption Two
+                        </div>
+                      </div>
+                </div> -->
+                
+                  <div class="mySlides fade">
+                    <div class="no-scrollVertical">
+                        <div class="photoProject-no-scroll">
+                  <img src="./public/find-you-hat.png">
+
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="detail">
+                            Caption Two
+                        </div>
+                      </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div class="dot-container" >
+                  <span class="dot" onclick="currentSlide(0)"></span> 
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                </div>
+
+
+            <!-- <div class="slides">
+                <div class="slide">
+                    <img src="./public/petervision.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./public/generation.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./public/petervision.png" alt="">
+                </div>
+                
+            </div>
+            <div class="slide-controls">
+                <button id="prev-btn">
+                    <i class='bx bx-chevron-left' style='color:#ffffff'  ></i>
+
+                </button>
+                <button id="next-btn">
+                    <i class='bx bx-chevron-right' style='color:#ffffff' ></i>
+                    
+                </button>
+            </div> -->
+
+           <!-- <div class="carousel">
+<ol class="carousel-view">
+    <li id="carousel-item-1"
+    tabindex="0"
+    class ="carousel-slide"    >
+<div class="carousel-snapper">
+  <div class="carousel-content">
+    <img class="carousel-img" src="./public/petervision.png" />
+  </div>
+    <a href="#carousel-item-4" class="carousel-control prev" tabindex="-1">Previous</a>
+    <a href="#carousel-item-2" class="carousel-control next" tabindex="-1">Next</a>
+</div>
+</li>
+<li id="carousel-item-2"
+tabindex="1"
+class ="carousel-slide"    >
+<div class="carousel-snapper">
+<div class="carousel-content">
+<img class="carousel-img" src="./public/petervision.png" />
+</div>
+<a href="#carousel-item-1" class="carousel-control prev" tabindex="-1">Previous</a>
+<a href="#carousel-item-3" class="carousel-control next" tabindex="-1">Next</a>
+</div>
+</li>
+</ol>
+           </div> -->
+            </section>
+            <section class="contact" id="contact">
+            </section>
 <script src="./script.js"></script>
         </body>
 </html>
