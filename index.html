@@ -1,210 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-      
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="bx bx-menu" id="menu-icon" onclick="toggleMobileMenu()">
-                </div>
-                <ul class="navbar-mobile" id="navbar-mobile">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="about typing" id="about"> 
-            <div class="about-text">
-                <h1 class ="typewriter">HELLO MY NAME IS...</h1>
-                <h4>Haluethaichanok Ittisawetchaikul</h4>
-                <p    > I'm a junior full-stack developer skilled in React, JavaScript, Node.js, and MongoDB. </p>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <div
+            class="bx bx-menu"
+            id="menu-icon"
+            onclick="toggleMobileMenu()"
+          ></div>
+          <ul class="navbar-mobile" id="navbar-mobile">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="about typing" id="about">
+        <div class="about-text">
+          <h1 class="typewriter">HELLO MY NAME IS...</h1>
+          <h4>Haluethaichanok Ittisawetchaikul</h4>
+          <p>
+            I'm a junior full-stack developer skilled in React, JavaScript,
+            Node.js, and MongoDB.
+          </p>
+        </div>
+        <div class="about-img">
+          <img class="profile" src="./public/profile.jpeg" />
+        </div>
+      </section>
+      <section class="experience" id="experience">
+        <h1>Experience</h1>
+        <div class="timeline hidden-right">
+          <div class="container container-left hidden">
+            <img class="experience-img" src="./public/petervision.png" />
+            <div class="text-box">
+              <h3>Junior Full-Stack Developer</h3>
+              <h3>Peter Vision Co., Ltd.</h3>
+              <h3>September 2023 to Present</h3>
+              <ul class="list-experience">
+                <li>
+                  Understand client specifications and develop websites to meet
+                  client needs
+                </li>
+                <li>
+                  Developed websites using React.js, Material UI, Next.js, and
+                  SQL
+                </li>
+                <li>Developed mobile apps with Flutter</li>
+                <li>
+                  Collaborated with teammates to develop and review code,
+                  provide feedback, and troubleshoot issues
+                </li>
+                <li>
+                  Gained code feedback from senior developers and mentors to
+                  improve code quality
+                </li>
+              </ul>
             </div>
-            <div class="about-img">
-                <img class="profile" src="./public/profile.jpeg" />
+          </div>
+          <div class="container container-right hidden">
+            <img class="experience-img" src="./public/generation.png" />
+            <div class="text-box">
+              <h3>Junior Developer Learner</h3>
+              <h4>Generation Thailand</h4>
+              <h4>February - May 2023</h4>
+              <ul class="list-experience">
+                <li>
+                  Learned how to build websites by using diverse programming
+                  languages and frameworks
+                </li>
+                <li>
+                  Technical Skills: HTML5, CSS3, JavaScript, React, Node.js,
+                  Express, Relational databases, MongoDB and git version
+                  control.
+                </li>
+              </ul>
             </div>
-        </section>
-        <section class="experience" id="experience">
-            <h1>Experience</h1>
-            <div class="timeline hidden-right">
-                <div class="container container-left hidden">
-                    
-                        
-                    
-                    <img class="experience-img" src="./public/petervision.png" />
-                    <div class="text-box">
-                        <h5>Inn</h5>
-                        <small>2019 - Present</small>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="container container-right hidden">
-                    <img class="experience-img" src="./public/generation.png" />
-                    <div class="text-box">
-                        <h5>Inn</h5>
-                        <small>2019 - Present</small>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="container container-left hidden">
-                    <img class="experience-img" src="./public/petervision.png" />
-                    <div class="text-box">
-                        <h5>Inn</h5>
-                        <small>2019 - Present</small>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-    
+          </div>
+          <div class="container container-left hidden">
+            <img class="experience-img" src="./public/chula.jpeg" />
+            <div class="text-box">
+              <h3>Bachelor's Degree of Science in Food Technology</h3>
+              <h4>Chulalongkorn University</h4>
+              <h4>August 2017 - July 2021</h4>
+              <ul class="list-experience">
+                <li>
+                  Senior project: PUFA-related gene expression analysis of
+                  <i>copepod Apocyclops royi</i>
+                </li>
+              </ul>
             </div>
-          
-        </section>
-        <section class="projects" id="projects">
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <div class="scrollVertical">
-                        <div class="photoProject">
-                  <img src="./public/orangecat.jpg">
-
-                        </div>
-                      </div>
-                  <div class="text">
-                    <div class="detail">
-                        <h3>
-                            <b>OrangeCat Exercise Tracker Web Application</b>
-                          </h3>
-                         
-                          <p>
-                            Responsive web application page for OrangeCat exercise tracker
-                            as a group project. The Target group is 7 to 25 years. Using
-                            React for frontend and node.js, express, mongoose, MongoDB
-                            Atlas, and Cloudinary for the backend.
-                          </p>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="colossal">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="scrollVertical">
+                <div class="photoProject">
+                  <img src="./public/orangecat.jpg" />
+                </div>
+              </div>
+              <div class="text">
+                <div class="detail">
+                  <h3>
+                    <b>OrangeCat Exercise Tracker Web Application</b>
+                  </h3>
+                  <p>
+                    Responsive web application page for OrangeCat exercise
+                    tracker as a group project. The Target group is 7 to 25
+                    years. Using React for frontend and node.js, express,
+                    mongoose, MongoDB Atlas, and Cloudinary for the backend.
+                  </p>
+                  <div class="allBut">
+                    <a href="https://orangecat.vercel.app/" target="_blank">
+                      <button class="btn">DEMO</button>
+                    </a>
+                    <a
+                      href="https://github.com/lethal1147/frontend-jsd4-groupE"
+                      target="_blank"
+                    >
+                      <button class="btn">FRONTEND</button>
+                    </a>
+                    <a
+                      href="https://github.com/lethal1147/backend-jsd4-groupE.git"
+                      target="_blank"
+                    >
+                      <button class="btn">BACKEND</button>
+                    </a>
                   </div>
                 </div>
-                
-                <div class="mySlides fade">
-                    <div class="scrollVertical">
-                        <div class="photoProject">
-                  <img src="./public/colmar.jpg">
-
-                        </div>
-                      </div>
-                      <div class="text">
-                        <div class="detail">
-                            Caption Two
-                        </div>
-                      </div>
-                </div>
-
-                <!-- <div class="mySlides fade">
-                    <div class="scrollVertical ">
-                        <div class="photoProject no">
-                  <img src="./public/find-you-hat.png">
-
-                        </div>
-                      </div>
-                      <div class="text">
-                        <div class="detail">
-                            Caption Two
-                        </div>
-                      </div>
-                </div> -->
-                
-                  <div class="mySlides fade">
-                    <div class="no-scrollVertical">
-                        <div class="photoProject-no-scroll">
-                  <img src="./public/find-you-hat.png">
-
-                        </div>
-                      </div>
-                      <div class="text">
-                        <div class="detail">
-                            Caption Two
-                        </div>
-                      </div>
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                
-                </div>
-                <br>
-                
-                <div class="dot-container" >
-                  <span class="dot" onclick="currentSlide(0)"></span> 
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                </div>
-
-
-            <!-- <div class="slides">
-                <div class="slide">
-                    <img src="./public/petervision.png" alt="">
-                </div>
-                <div class="slide">
-                    <img src="./public/generation.png" alt="">
-                </div>
-                <div class="slide">
-                    <img src="./public/petervision.png" alt="">
-                </div>
-                
+              </div>
             </div>
-            <div class="slide-controls">
-                <button id="prev-btn">
-                    <i class='bx bx-chevron-left' style='color:#ffffff'  ></i>
 
-                </button>
-                <button id="next-btn">
-                    <i class='bx bx-chevron-right' style='color:#ffffff' ></i>
-                    
-                </button>
-            </div> -->
+            <div class="mySlides fade">
+              <div class="scrollVertical">
+                <div class="photoProject">
+                  <img src="./public/colmar.jpg" />
+                </div>
+              </div>
+              <div class="text">
+                <div class="detail">
+                  <h3>
+                    <b>Colmar Academy</b>
+                  </h3>
+                  <p>
+                    Responsive landing page for Colmar Academy. Using HTML and
+                    CSS.
+                  </p>
+                  <div class="allBut">
+                    <a href="https://colmar-mii6.vercel.app/" target="_blank">
+                      <button class="btn">DEMO</button>
+                    </a>
+                    <a
+                      href="https://github.com/Haluethaichanok-J/Colmar.git"
+                      target="_blank"
+                    >
+                      <button class="btn">REPO</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mySlides fade">
+              <div class="no-scrollVertical">
+                <div class="photoProject-no-scroll">
+                  <img src="./public/find-you-hat.png" />
+                </div>
+              </div>
+              <div class="text">
+                <div class="detail">
+                  <h3>
+                    <b>Find You Hat</b>
+                  </h3>
+                  <p>
+                    Mini console game in that you have to find your hat. Using
+                    Node.js
+                  </p>
+                  <div class="allBut">
+                    <a
+                      href="https://replit.com/join/rxsnzoicvq-haluethaichanok"
+                      target="_blank"
+                    >
+                      <button class="btn">REPLIT</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-           <!-- <div class="carousel">
-<ol class="carousel-view">
-    <li id="carousel-item-1"
-    tabindex="0"
-    class ="carousel-slide"    >
-<div class="carousel-snapper">
-  <div class="carousel-content">
-    <img class="carousel-img" src="./public/petervision.png" />
-  </div>
-    <a href="#carousel-item-4" class="carousel-control prev" tabindex="-1">Previous</a>
-    <a href="#carousel-item-2" class="carousel-control next" tabindex="-1">Next</a>
-</div>
-</li>
-<li id="carousel-item-2"
-tabindex="1"
-class ="carousel-slide"    >
-<div class="carousel-snapper">
-<div class="carousel-content">
-<img class="carousel-img" src="./public/petervision.png" />
-</div>
-<a href="#carousel-item-1" class="carousel-control prev" tabindex="-1">Previous</a>
-<a href="#carousel-item-3" class="carousel-control next" tabindex="-1">Next</a>
-</div>
-</li>
-</ol>
-           </div> -->
-            </section>
-            <section class="contact" id="contact">
-            </section>
-<script src="./script.js"></script>
-        </body>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <br />
+          <div class="dot-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="container-contract">
+          <h3>Reach me on</h3>
+          <div class="contract-details">
+            <a
+              href="https://docs.google.com/document/d/1idGYx4drzlZcaH21bOuXozSdcUQxAQ1qeWUkuE-JvrE/edit?usp=sharing"
+              target="_blank"
+            >
+              <button class="btn">Resume</button>
+            </a>
+            <a
+              href="mailto:haluethaichanok@gmail.com?subject=Mail fro our Website"
+              target="_blank"
+            >
+              <button class="btn">Email</button>
+            </a>
+            <a href="https://github.com/Haluethaichanok-Itti" target="_blank">
+              <button class="btn">GitHub</button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/haluethaichanok-itti
+      "
+              target="_blank"
+            >
+              <button class="btn">LinkedIn</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2024 Haluethaichanok Itti</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>

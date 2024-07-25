@@ -1,0 +1,538 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  width: hv;
+}
+
+:root {
+  --bg-color: #131010;
+  --text-color: #fdfcfc;
+  --hover-color: #19d8de;
+  --neon-color: #19d8de;
+  --bg-img-color: #fdfcfc;
+  --normal-font: 1.5rem;
+  --big-font: 2.5rem;
+  --neon-font: 0 0 10px #12f7ff;
+  --neon-box-shadow: 0 0 0.2rem #12f7ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  min-height: 100%;
+  width: 100%;
+  font-size: var(--normal-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  /* padding: 10px 100px; */
+  /* background-color: transparent; */
+ 
+}
+
+nav {
+  width: 100%;
+  padding: 20px 0px;
+  /* padding: 10px 100px; */
+  /* position: fixed;
+  top:0;
+  z-index: 2; */
+}
+
+.logo {
+  color: var(--text-color);
+}
+
+.logo:hover {
+  text-shadow: 0px 0px 5px var(--text-color), 0px 0px 10px var(--text-color),
+    0px 0px 30px var(--hover-color), 0px 0px 40px var(--hover-color),
+    0px 0px 55px var(--hover-color), 0px 0px 75px var(--hover-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+  color: var(--text-color);
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 2;
+  padding: 20px;
+  background-color:  var(--bg-color);
+}
+
+.navbar li a {
+  color: var(--text-color);
+}
+
+.navbar li a:hover {
+   position: relative; 
+  }
+
+  .navbar li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* ระยะห่างระหว่างข้อความกับเส้นขีดใต้ */
+    height: 2px; /* ความหนาของเส้นขีดใต้ */
+    background-color: var(--text-color); /* สีของเส้นขีดใต้ */
+    transition: all 0.3s ease-in-out; /* เพิ่มเอฟเฟกต์การเคลื่อนไหว */
+}
+  
+/* .navbar li a:hover {
+  text-shadow: 0px 0px 5px var(--text-color), 0px 0px 10px var(--text-color),
+    0px 0px 30px var(--hover-color), 0px 0px 40px var(--hover-color),
+    0px 0px 55px var(--hover-color), 0px 0px 75px var(--hover-color);
+} */
+
+#menu-icon {
+  margin: 10px;
+  display: none;
+}
+
+.navbar-mobile {
+  display: none;
+  list-style: none;
+  overflow: hidden;
+  background-color: red;
+  /* position: relative; */
+  width: 100%;
+  padding-left: 10px;
+}
+.navbar-mobile li {
+  width: 100%;
+}
+.navbar-mobile li a {
+  color: var(--text-color);
+}
+
+.about {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  /* padding: 10px 30px; */
+  /* margin-top: 100px; */
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+}
+.about-text {
+  width: 50%;
+  text-align: center;
+  line-height: 2; 
+}
+
+/* DEMO-SPECIFIC STYLES */
+.about-text h1 {
+    color: var(--text-color);
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid  var(--text-color); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      /* typing 3.5s steps(30, end), */
+      typing 5s steps(30, end) ,
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:  var(--text-color) }
+  }
+
+
+.about-img {
+  width: 50%;
+  /* height: 50%; */
+  display: flex;
+  justify-content: center;
+  /* padding: 10px 30px; */
+  /* shape-image-threshold: ; */
+  /* align-items: center; */
+  border-radius: 50%;
+
+}
+
+.about-img img {
+  width: 50%;
+  /* height: 50%; */
+  align-items: center;
+  border-radius: 50%;
+  /* border: 1px solid var(--text-color); */
+  /* box-shadow: 0px 0px 5px 5px rgba(128, 0, 0, 1); */
+
+  box-shadow:  0px 0px 0px 0px  var(--neon-color), 0px 0px 5px 5px  var(--text-color),  0px 0px 5px 5px  var(--neon-color),0px 0px 10px 10px  var(--neon-color);
+
+  /* text-shadow: 0px 0px 5px  5px var(--text-color), 0px 0px 10px 10px var(--text-color),
+  0px 0px 30px 30px var(--hover-color), 0px 0px 40px 40px var(--hover-color),
+  0px 0px 55px 55px var(--hover-color), 0px 0px 75px 75px var(--hover-color); */
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    /* margin-top: ; */
+    margin: 50px auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    /* animation: moveline 6s linear forwards; */
+  }
+
+  @keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+  }
+
+.container {
+    padding:  10px 50px;
+    position: relative;
+    width: 49%;
+    background-color: rgb(12, 27, 40);
+    /* animation: movedown 1s linear forwards;
+    opacity: 0; */
+   /* animation: movedown  2s ease 1s infinite normal none; */
+   /* animation: movedown 2s ease 3 normal none; */
+   /* animation: movedown ease 1s infinite normal none; */
+   /* animation: movedown 2s  ease 1s 1 normal none;  */
+
+   /* Copy code to element you want to animate */
+/* animation: customAni 2s ease 1s 1 normal none; */
+
+   opacity: 1;
+   z-index: 1;
+}
+
+
+
+
+
+
+/* @keyframes movedown{
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+
+.container-left {
+   left:0;
+}
+
+.container-right {
+left : 51%;
+}
+
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+
+.container:nth-child(2){
+    animation-delay: 4000s;
+}
+
+.container:nth-child(3){
+    animation-delay: 6000s;
+}
+
+.text-box{
+    padding:  20px 30px;
+    position:relative;
+    border-radius: 6px;
+    /* background-color: rgb(15, 67, 112); */
+}
+
+
+.container img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    z-index: 1;
+    right: -20px;
+    top: 32px;
+    background:  var(--bg-img-color);
+    padding: 10px;
+    object-fit: contain;
+}
+
+.container-right img{
+    left: -20px;
+}
+
+.hidden{
+    opacity: 0;
+transform: translateX(0);
+    transition: all 1s;
+}
+
+.hidden-left{
+    opacity: 0;
+transform: translateX(100%);
+    transition: all 1s;
+}
+
+.hidden-right{
+    opacity: 0;
+transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+opacity: 1;
+transform: translateX(0);
+}
+
+.projects{
+  padding-top: 50px;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.mySlides img{
+  width: 50%;
+ margin: 50px;
+
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.scrollVertical {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photoProject img {
+  width: 580px;
+  height: 400px;
+}
+@keyframes slideVertical {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: -400px;
+  }
+  100% {
+    margin-top: -500px;
+  }
+}
+
+.photoProject:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* margin: 0; */
+  line-height: 50px;
+  animation: slideVertical infinite 5s alternate;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    body{
+        font-size: 16px;
+    }
+
+  .navbar {
+    display: none;
+  }
+  nav {
+    padding: 0px 0px;
+  }
+  #menu-icon {
+    margin: 10px;
+    display: block;
+    position: sticky;
+    top:0
+  }
+h1{
+    font-size: 20px;}
+
+ .about{
+    flex-direction: column-reverse;
+    width: 100%;   
+    gap: 50px; 
+ }
+
+ .about-img {
+    width: 100%;
+  }
+
+ .about-text {
+    width: 80%;
+  }
+
+ .experience{
+    margin:0 10px; ;
+ }
+ .timeline{
+    margin-top: 20px;
+ }
+ .timeline::after {
+    content: '';
+    /* position: absolute; */
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    margin-left: -3px;
+  }
+  .container {
+    padding:  10px 10px 10px 50px;
+    position: relative;
+    width: 90%;
+    background-color: rgb(12, 27, 40);
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.container-right , .container-left  {
+    left : 5%;
+    }
+    .container-left img , .container-right img{
+        left: -10px;
+    }
+
+}
