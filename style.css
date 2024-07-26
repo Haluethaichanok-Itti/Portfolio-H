@@ -39,6 +39,9 @@
   --font-size-footer: 16px;
   --font-size-caption: 15px;
   --font-size-list-mobile: 16px;
+  --font-family-head-about:40px;
+  --font-family-main-about:25px;
+  --font-size-main-mobile: 18px;
 }
 
 body {
@@ -132,17 +135,15 @@ main {
   width: 50%;
   text-align: center;
   line-height: 2;
+  font-size: var(--font-family-main-about);
 }
-.about-text h1 {
-  color: var(--text-color);
-  font-family: var(--font-family-head);
+.typewriter {
+  display: inline-block; 
   overflow: hidden;
   border-right: 0.15em solid var(--text-color);
   white-space: nowrap;
-  margin: 0 auto;
   letter-spacing: 0.15em;
-  animation: typing 5s steps(30, end),
-    blink-caret 0.5s step-end infinite;
+  animation: typing 5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 /* The typing effect */
 @keyframes typing {
@@ -150,7 +151,7 @@ main {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 80%;
   }
 }
 /* The typewriter cursor effect */
@@ -499,7 +500,11 @@ footer {
     width: 100%;
   }
   .about-text {
-    width: 80%;
+    width: 100%;
+    font-size: var(--font-size-main-mobile);
+  }
+  .about-text h1 {
+    font-family: var(--font-family-head);
   }
 
   /* Experience */
@@ -587,7 +592,7 @@ footer {
     text-align: start;
   }
   .dot {
-    margin: 170px 2px;
+    margin: 190px 2px;
   }
 
   /* Contact */
