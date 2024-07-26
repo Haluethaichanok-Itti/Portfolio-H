@@ -4,10 +4,22 @@
       {
         "src": "index.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "styles/**/*.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "scripts/**/*.js",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "images/**/*",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "/(.*)", "dest": "/$1" }
     ]
   }
   
